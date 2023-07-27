@@ -1,24 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect } from "react";
+import ProductsTable from "./components/ProductsTable";
+import ProductForm from "./components/ProductForm";
+import useFirestore from "./hooks/useFirestore";
 
 function App() {
+  const { getProducts, products } = useFirestore();
+  useEffect(() => {
+    getProducts();
+  }, [products, getProducts]);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <h1>Productos</h1>
+      <ProductsTable products={products} />
+      <h2>Agregar Producto</h2>
+      <ProductForm />
+    </>
   );
 }
 
