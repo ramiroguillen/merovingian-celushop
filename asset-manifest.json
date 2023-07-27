@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/static/js/main.5008375e.js",
-    "index.html": "/index.html",
-    "main.5008375e.js.map": "/static/js/main.5008375e.js.map"
+    "main.js": "/merovingian-celushop/static/js/main.dec89e17.js",
+    "index.html": "/merovingian-celushop/index.html",
+    "main.dec89e17.js.map": "/merovingian-celushop/static/js/main.dec89e17.js.map"
   },
   "entrypoints": [
-    "static/js/main.5008375e.js"
+    "static/js/main.dec89e17.js"
   ]
 }
